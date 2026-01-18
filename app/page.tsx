@@ -13,7 +13,7 @@ const Home = () => {
         <p className="text-center mt-5">Hackathons, meetups, conferences, all in one place.</p>
         <ExploreBtn />
 
-        <div className="mt-20 space-y-7">
+        <div className="mt-20 space-y-7" id="events">
           <h3>Featured Events</h3>
 
           <ul className="events">{events.map((event) => (
