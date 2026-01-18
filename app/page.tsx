@@ -1,6 +1,7 @@
 import EventCard from "./components/EventCard"
 import ExploreBtn from "./components/ExploreBtn"
 import events from "@/lib/constants"
+import PosthogTest from "./components/posthogtest"
 
 const Home = () => {
   console.log('What type of a component am i?')
@@ -17,9 +18,10 @@ const Home = () => {
           <h3>Featured Events</h3>
 
           <ul className="events">{events.map((event) => (
-            <EventCard title={event.title} image={event.image} slug={event.slug} location={event.location} date={event.date} time={event.time}  />
+            <EventCard key={event.title} title={event.title} image={event.image} slug={event.slug} location={event.location} date={event.date} time={event.time}  />
           ))}</ul>
         </div>
+        <PosthogTest />
       </section>
     </main>
 
